@@ -27,10 +27,10 @@ class NaiveSolution(Solution):
             2.1. rootVal = preOrder[0]
             2.2. index = inOrder.index(rootVal)
             2.3. then:
-                2.3.1. leftPreOrder == preOrder[1:1+index]
-                2.3.2. leftInOrder == preOrder[0:index]
-                2.3.3. rightPreOrder == preOrder[1+index:]
-                2.3.4. rightInOrder == preOrder[1+index:]
+                2.3.1. leftPreOrder  == preOrder[1:index+1]
+                2.3.2. leftInOrder   == inOrder[0:index]
+                2.3.3. rightPreOrder == preOrder[index+1:]
+                2.3.4. rightInOrder  == inOrder[index+1:]
                 2.3.5. therefore, continue recursively for both subtrees and construct the new tree
 
     Complexity:
@@ -46,7 +46,7 @@ class NaiveSolution(Solution):
         index = inOrder.index(rootVal)
         return BinTreeNode(
             rootVal,
-            self.buildTree(preOrder[1:1+index], inOrder[:index]),
+            self.buildTree(preOrder[1:index+1], inOrder[:index]),
             self.buildTree(preOrder[index+1:], inOrder[index+1:])
         )
 
@@ -66,11 +66,11 @@ class LookupSolution(Solution):
             return None
 
         rootVal = preOrder[0]
-        where = inOrderLookup[rootVal]
+        index = inOrderLookup[rootVal]
         return BinTreeNode(
             rootVal,
-            self.buildTree(preOrder[1:1 + where], inOrder[:where]),
-            self.buildTree(preOrder[1 + where:], inOrder[where + 1:])
+            self.buildTree(preOrder[1:index+1], inOrder[:index]),
+            self.buildTree(preOrder[index+1:], inOrder[index+1:])
         )
 
     def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[BinTreeNode]:
