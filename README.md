@@ -11,11 +11,13 @@ In the `problems/` directory there are solutions to various problems from the se
 
 In the `algorithms/` directory there are implementations for some of the more complex algorithms from the Bachelor's degree (most of them are graph-related).
 
-In the `data_structures/` there are various implementations for some useful data structures, including: Binary Trees, Binary Heaps, Graphs, Hashmaps, Linked Lists, Queues, Stacks and Tries. Some of them are used by certain solutions of `problems/` or by certain implementations of `algorithms/`.
+In the `data_structures/` there are various implementations for some useful data structures, including: Binary Trees, Binary Heaps, Graphs, 
+Hashmaps, Linked Lists, Queues, Stacks and Tries. Some of them are used by certain solutions to `problems/` or by certain implementations of 
+`algorithms/`.
 
 In the `tests/` directory there are some utils used for testing solutions of various problems. These utils, too, are categorized by the underlying data structure.
 
-In the `theory/` directory there are summaries of the relevant theory for each data strucutre.
+In the `theory/` directory there are summaries of the relevant theory for each data structure.
 
 
 The inner organization of problem solutions
