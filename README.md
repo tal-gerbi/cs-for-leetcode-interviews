@@ -24,13 +24,13 @@ The inner organization of problem solutions
 ============================================
 Each problem is solved in a single file, which contains the following (in order):
 1. Documentation of:
-	- The name and description link of the problem
-	- Why this problem was included
-1. For each solution:
-	- A few words about the approach I have chosen
-	- Complexity analysis (both in terms of time and space)
-	- The actual implementation
-1. Tests for each of the solutions (only the examples provided by Leetcode are tested)
+    - The name and description link of the problem
+    - Why this problem was included
+2. For each solution:
+    - A few words about the approach I have chosen
+    - Complexity analysis (both in terms of time and space)
+    - The actual implementation
+3. Tests for each of the solutions (only the examples provided by Leetcode are tested)
 
 P.S.
 ====
