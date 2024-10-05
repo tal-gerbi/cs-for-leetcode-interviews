@@ -17,6 +17,7 @@ def assertTreeIsSameAsArray(tree: Optional[BinTreeNode], arr: List[Optional[int]
         nextLevel: Deque[Optional[BinTreeNode]] = deque()
         emptyNextLevel = True
         while currentLevel:
+            # Compare the next value in the tree to the next value in the array
             node = currentLevel.pop()
             assert i < len(arr), "not enough elements in array"
             if node:
@@ -24,12 +25,14 @@ def assertTreeIsSameAsArray(tree: Optional[BinTreeNode], arr: List[Optional[int]
             else:
                 assert arr[i] is None, f"expected None, but got {arr[i]}"
 
+            # Prepare the next level of nodes
             i += 1
             if node:
                 if node.left or node.right:
                     emptyNextLevel = False
                 nextLevel.appendleft(node.left)
                 nextLevel.appendleft(node.right)
+
         if emptyNextLevel:  # If all the nodes in the next level are None, stop
             hasNextLevel = False
         currentLevel = nextLevel
