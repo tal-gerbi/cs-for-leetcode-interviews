@@ -34,5 +34,5 @@ Each problem is solved in a single file, which contains the following (in order)
 
 P.S.
 ====
-I use `camelCase` (for methods, fields, parameters, and variables) everywhere. I still use snake_case for file names and module names.
+I use `camelCase` (for methods, fields, parameters, and variables) everywhere. I still use `snake_case` for file names and module names.
 I know PEP8 says `snake_case` should be used pretty much everywhere for "readability", but it's dumb and wrong.
