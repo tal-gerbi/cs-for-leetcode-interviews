@@ -1,12 +1,13 @@
 Motivation
 ==========
 I am preparing for a position in one of the big corps (Microsoft, Google, Palo Alto, etc.). Since a small portion of the admission process 
-includes "leetcode" interviews, I decided to refresh some of my knowledge for my bachelor's degree in Computer Science that might be relevant.
+includes "leetcode" interviews, I decided to refresh some of my knowledge from my bachelor's degree in Computer Science that might be relevant.
 
 In order to prevent this process from becoming too theoretical, I simply solved the Leetcode problem set titled "Top Interval 150" 
 (https://leetcode.com/studyplan/top-interview-150). Whenever a familiarity with an old-new data structure or technique was required, I looked up the 
-theory (online, and, if necessary, in computer science courses), summarized it, and then solved the problem. By the way, Data Structures and 
-Algorithms were the most useful courses when more advanced theoretical background was required.
+theory (online, and, if necessary, in computer science courses and books), summarized it, and then solved the problem.
+
+By the way, The book "Introduction to Algorithms" by Cormen et al. was what I used the most when more advanced theoretical background was required.
 
 
 The organization of this project
