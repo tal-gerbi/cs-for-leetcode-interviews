@@ -10,7 +10,7 @@ from tests.binary_tree.construct import construct
 class Solution(ABC):
     """
         - Title: Binary Tree Maximum Path Sum
-        - Available at: https://leetcode.com/problems/binary-tree-maximum-path-sum/?envType=study-plan-v2&envId=top-interview-150
+        - Available at: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
         - Why was this chosen:
             This problem requires multiple values (3) from the left and right subtrees, not just one.
     """
@@ -35,6 +35,7 @@ class MultipleRecursionsSolution(Solution):
         Time Complexity: O(n) (due to memoization)
         Space Complexity: O(n)
     """
+
     def maxPathStartingAtRoot(self, root: Optional[BinTreeNode], d1) -> float:
         if root in d1:
             return d1[root]
@@ -94,6 +95,7 @@ class MultipleValuesRecursionSolution(Solution):
         Time Complexity: O(n)
         Space Complexity: O(h)
     """
+
     def _maxPathSum(self, root: Optional[BinTreeNode]) -> (float, float, float):
         if not root:
             return float("-inf"), float("-inf"), float("-inf")
@@ -120,6 +122,5 @@ def test_small_tree(solution: Solution):
 
 @pytest.mark.parametrize("solution", [MultipleRecursionsSolution(), MultipleValuesRecursionSolution()])
 def test_large_tree(solution: Solution):
-    root = construct([-10,9,20,None,None,15,7])
+    root = construct([-10, 9, 20, None, None, 15, 7])
     assert solution.maxPathSum(root) == 42
-
