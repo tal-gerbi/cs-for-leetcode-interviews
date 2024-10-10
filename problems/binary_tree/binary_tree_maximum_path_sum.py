@@ -12,7 +12,7 @@ class Solution(ABC):
         - Title: Binary Tree Maximum Path Sum
         - Available at: https://leetcode.com/problems/binary-tree-maximum-path-sum/?envType=study-plan-v2&envId=top-interview-150
         - Why was this chosen:
-            This problem requires to separate the recursion to multiple (3) functions.
+            This problem requires multiple values (3) from the left and right subtrees, not just one.
     """
 
     @abstractmethod
