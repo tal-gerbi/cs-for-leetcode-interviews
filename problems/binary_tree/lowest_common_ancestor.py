@@ -8,7 +8,7 @@ from tests.binary_tree.construct import construct
 class Solution(ABC):
     """
         - Title: Lowest Common Ancestor of a Binary Tree
-        - Available at: ______
+        - Available at: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/
         - Why was this chosen:
             In order to learn about the notion of LCA.
     """

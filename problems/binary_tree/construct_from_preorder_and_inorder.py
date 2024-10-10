@@ -10,7 +10,7 @@ from tests.binary_tree.same import assertTreeIsSameAsArray
 class Solution(ABC):
     """
         - Title: Construct Binary Tree from Preorder and Inorder Traversal
-        - Available at: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/
+        - Available at: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/
         - Why was this chosen:
             Just to get the feeling of the meaning of pre-order and in-order traversals.
     """
