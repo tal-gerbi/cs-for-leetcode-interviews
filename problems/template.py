@@ -27,5 +27,5 @@ class ExampleSolution(Solution):
         return 6
 
 
-def test_example():
+def testExample():
     assert ExampleSolution().example() == 6

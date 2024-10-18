@@ -44,5 +44,5 @@ class SecondSolution(Solution):
 
 
 @pytest.mark.parametrize("solution", [FirstSolution(), SecondSolution()])
-def test_example(solution: Solution):
+def testExample(solution: Solution):
     assert solution.example() == 6
