@@ -58,7 +58,7 @@ If *h* is the height of the tree, then,
     & 2^{h+1} - 1 \le 2*n + 1
 \end{align}
 ```
-Now, since the amount of swaps between level *k-1* to level *k* is at most `2^{k}-1` (The number of elements in the first k-1 layers), we get a total number of swaps, S, is
+Now, since the amount of swaps between level *k-1* to level *k* is at most $2^{k}-1$ (The number of elements in the first k-1 layers), we get a total number of swaps, *S*, is
 ```math
 \begin{align}
     & S = (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le \\
