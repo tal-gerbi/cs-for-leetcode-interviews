@@ -1,10 +1,9 @@
 # Heaps
-
 A *min heap* is a special case of a complete binary tree, where for every *parent* and *child*, it holds that:
-`parent.val <= child.val`
+`parent.val <= child.val`.
 
 A *max heap* is a special case of a complete binary tree, where for every *parent* and *child*, it holds that:
-`child.val >= child.val`
+`child.val >= child.val`.
 
 (See `binary_tree.md` for an explanation of what this means).
 
@@ -19,7 +18,7 @@ Since a heap is a complete binary tree, it is usually implemented on top of an a
 In this array, *arr*, the left and right children of _arr[i]_ are _arr[2*i+1]_ and _arr[2*i+2]_ (If they are present in the array).
 
 ## Building a heap in O(n) time
-In order to build a min heap from an array in time O(n), the following algorithm is used:
+In order to build a min heap from an array in linear time, the following algorithm is used:
 ```python
 from typing import List, Optional
 
@@ -28,10 +27,12 @@ def __init__(self, arr: List[int]):
     self.capacity = self.size = len(arr)
     self.heapify(arr)
 
+
 def heapify(self, arr: List[int]):
     for i in range(self.size//2-1, -1, -1):
         self.heapifyDown(arr, i)
-        
+
+
 def heapifyDown(self, arr: List[Optional[int]], i: int):
         bestChild = True
         while bestChild:
@@ -58,7 +59,7 @@ If *h* is the height of the tree, then,
     & 2^{h+1} - 1 \le 2n + 1
 \end{align}
 ```
-Now, since the amount of swaps between level *k-1* to level *k* is at most $2^{k}-1$ (The number of elements in the first k-1 layers), we get a total number of swaps, *S*, is
+Now, since the amount of swaps between level *k-1* to level *k* is at most $2^{k}-1$ (The number of elements in the first k-1 layers), we get that the total number of swaps, *S*, is
 ```math
 \begin{align}
     & S = (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le \\
