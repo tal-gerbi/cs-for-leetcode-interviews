@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from data_structures.stack.linked_list_stack import LinkedListStack
 from tests.binary_tree.construct import construct
 
@@ -34,7 +34,7 @@ class StackBinaryTreeIterator(Solution):
         Time Complexity: O(n)
         Space Complexity: O(h)
     """
-    def __init__(self, root: BinTreeNode):
+    def __init__(self, root: TreeNode):
         self.stack = LinkedListStack()
         self.stack.push((root, True))
 

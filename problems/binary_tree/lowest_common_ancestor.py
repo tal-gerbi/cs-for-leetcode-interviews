@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -14,7 +14,7 @@ class Solution(ABC):
     """
 
     @abstractmethod
-    def lowestCommonAncestor(self, root: BinTreeNode, p: BinTreeNode, q: BinTreeNode) -> BinTreeNode:
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
         pass
 
 
@@ -29,7 +29,7 @@ class PathSolution(Solution):
         Space Complexity: O(n)
     """
 
-    def _reversed_path(self, root: BinTreeNode, node: BinTreeNode) -> Optional[List[BinTreeNode]]:
+    def _reversed_path(self, root: TreeNode, node: TreeNode) -> Optional[List[TreeNode]]:
         if root == node:
             return [root]
         if not root:
@@ -45,7 +45,7 @@ class PathSolution(Solution):
             return rightPath
         return None
 
-    def lowestCommonAncestor(self, root: BinTreeNode, p: BinTreeNode, q: BinTreeNode) -> BinTreeNode:
+    def lowestCommonAncestor(self, root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
         pPath = self._reversed_path(root, p)
         qPath = self._reversed_path(root, q)
         qPathSet = set(qPath)

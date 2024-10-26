@@ -3,7 +3,7 @@ from typing import Optional
 
 import pytest
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -16,7 +16,7 @@ class Solution(ABC):
     """
 
     @abstractmethod
-    def maxPathSum(self, root: BinTreeNode) -> int:
+    def maxPathSum(self, root: TreeNode) -> int:
         pass
 
 
@@ -36,7 +36,7 @@ class MultipleRecursionsSolution(Solution):
         Space Complexity: O(n)
     """
 
-    def maxPathStartingAtRoot(self, root: Optional[BinTreeNode], d1) -> float:
+    def maxPathStartingAtRoot(self, root: Optional[TreeNode], d1) -> float:
         if root in d1:
             return d1[root]
         if not root:
@@ -49,14 +49,14 @@ class MultipleRecursionsSolution(Solution):
         )
         return d1[root]
 
-    def maxPathThroughRoot(self, root: Optional[BinTreeNode], d1) -> float:
+    def maxPathThroughRoot(self, root: Optional[TreeNode], d1) -> float:
         if not root:
             return float("-inf")
 
         return (root.val + self.maxPathStartingAtRoot(root.left, d1) +
                 self.maxPathStartingAtRoot(root.right, d1))
 
-    def maxPathWithoutRoot(self, root: Optional[BinTreeNode], d1, d2) -> float:
+    def maxPathWithoutRoot(self, root: Optional[TreeNode], d1, d2) -> float:
         if root in d2:
             return d2[root]
         if not root:
@@ -73,7 +73,7 @@ class MultipleRecursionsSolution(Solution):
         d2[root] = m
         return d2[root]
 
-    def maxPathSum(self, root: BinTreeNode) -> int:
+    def maxPathSum(self, root: TreeNode) -> int:
         d1 = {}
         d2 = {}
         return int(max(
@@ -96,7 +96,7 @@ class MultipleValuesRecursionSolution(Solution):
         Space Complexity: O(h)
     """
 
-    def _maxPathSum(self, root: Optional[BinTreeNode]) -> (float, float, float):
+    def _maxPathSum(self, root: Optional[TreeNode]) -> (float, float, float):
         if not root:
             return float("-inf"), float("-inf"), float("-inf")
 
@@ -109,7 +109,7 @@ class MultipleValuesRecursionSolution(Solution):
                           startingAtRight, throughRight, withoutRight)
         return startingAtRoot, throughRoot, withoutRoot
 
-    def maxPathSum(self, root: BinTreeNode) -> int:
+    def maxPathSum(self, root: TreeNode) -> int:
         startingAtRoot, throughRoot, withoutRoot = self._maxPathSum(root)
         return int(max(startingAtRoot, throughRoot, withoutRoot))
 

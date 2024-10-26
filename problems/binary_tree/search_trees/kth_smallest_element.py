@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -14,7 +14,7 @@ class Solution(ABC):
     """
 
     @abstractmethod
-    def kthSmallest(self, root: Optional[BinTreeNode], k: int) -> int:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         pass
 
 
@@ -31,7 +31,7 @@ class KthSmallestSolution(Solution):
         Space Complexity: O(h)
     """
 
-    def _sizeAndKthSmallest(self, root: Optional[BinTreeNode], k: int) -> (int, Optional[int]):
+    def _sizeAndKthSmallest(self, root: Optional[TreeNode], k: int) -> (int, Optional[int]):
         if root is None:
             return 0, None
         if not root.left and not root.right:
@@ -43,7 +43,7 @@ class KthSmallestSolution(Solution):
             return leftSize + rightSize + 1, root.val
         return leftSize + rightSize + 1, leftSmallest if leftSmallest else rightSmallest
 
-    def kthSmallest(self, root: Optional[BinTreeNode], k: int) -> int:
+    def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:
         _, kthSmallest = self._sizeAndKthSmallest(root, k)
         return kthSmallest
 

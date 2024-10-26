@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List, Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -14,7 +14,7 @@ class Solution(ABC):
     """
 
     @abstractmethod
-    def levelOrder(self, root: Optional[BinTreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         pass
 
 
@@ -28,7 +28,7 @@ class LevelOrderSolution(Solution):
         Space Complexity: O(n)
     """
 
-    def levelOrder(self, root: Optional[BinTreeNode]) -> List[List[int]]:
+    def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
         levels = []
         currentLevel = [root] if root else []
         while currentLevel:

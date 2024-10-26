@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -14,7 +14,7 @@ class Solution(ABC):
     """
 
     @abstractmethod
-    def isValidBST(self, root: Optional[BinTreeNode]) -> bool:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
         pass
 
 
@@ -28,7 +28,7 @@ class MaxMinSolution(Solution):
         Space Complexity: O(h)
     """
 
-    def _minMaxValid(self, root: Optional[BinTreeNode]) -> (float, float, bool):
+    def _minMaxValid(self, root: Optional[TreeNode]) -> (float, float, bool):
         if root is None:
             return float("inf"), float("-inf"), True
 
@@ -46,7 +46,7 @@ class MaxMinSolution(Solution):
 
         return min(minLeft, minRight, root.val), max(maxLeft, maxRight, root.val), True
 
-    def isValidBST(self, root: Optional[BinTreeNode]) -> bool:
+    def isValidBST(self, root: Optional[TreeNode]) -> bool:
         _, _, valid = self._minMaxValid(root)
         return valid
 

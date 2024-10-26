@@ -1,20 +1,20 @@
 from collections import deque
 from typing import Deque, List, Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 
 
-def assertTreeIsSameAsArray(tree: Optional[BinTreeNode], arr: List[Optional[int]]):
+def assertTreeIsSameAsArray(tree: Optional[TreeNode], arr: List[Optional[int]]):
     if tree is None:
         assert arr == [], f"tree is empty but {arr} is not"
         return
 
-    currentLevel: Deque[Optional[BinTreeNode]] = deque()
+    currentLevel: Deque[Optional[TreeNode]] = deque()
     currentLevel.appendleft(tree)
     hasNextLevel = True
     i = 0
     while hasNextLevel:
-        nextLevel: Deque[Optional[BinTreeNode]] = deque()
+        nextLevel: Deque[Optional[TreeNode]] = deque()
         emptyNextLevel = True
         while currentLevel:
             # Compare the next value in the tree to the next value in the array

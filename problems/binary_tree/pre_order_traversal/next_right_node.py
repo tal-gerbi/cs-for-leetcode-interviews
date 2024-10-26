@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Dict, Optional
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.construct import construct
 
 
@@ -52,7 +52,7 @@ class ModifiedPreOrderTraversalSolution(Solution):
         return root
 
 
-def convert(node: Optional[BinTreeNode]) -> Optional[Node]:
+def convert(node: Optional[TreeNode]) -> Optional[Node]:
     if not node:
         return None
     return Node(node.val, convert(node.left), convert(node.right), None)

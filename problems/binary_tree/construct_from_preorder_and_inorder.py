@@ -3,7 +3,7 @@ from typing import Dict, List, Optional
 
 import pytest
 
-from data_structures.binary_tree.binary_tree import BinTreeNode
+from data_structures.binary_tree.binary_tree import TreeNode
 from tests.binary_tree.same import assertTreeIsSameAsArray
 
 
@@ -15,7 +15,7 @@ class Solution(ABC):
             Just to get the feeling of the meaning of pre-order and in-order traversals.
     """
     @abstractmethod
-    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[BinTreeNode]:
+    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[TreeNode]:
         pass
 
 
@@ -38,13 +38,13 @@ class NaiveSolution(Solution):
         Space Complexity: O(h)
     """
 
-    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[BinTreeNode]:
+    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[TreeNode]:
         if not preOrder:
             return None
 
         rootVal = preOrder[0]
         index = inOrder.index(rootVal)
-        return BinTreeNode(
+        return TreeNode(
             rootVal,
             self.buildTree(preOrder[1:index+1], inOrder[:index]),
             self.buildTree(preOrder[index+1:], inOrder[index+1:])
@@ -61,19 +61,19 @@ class LookupSolution(Solution):
             Space Complexity: O(n)
         """
 
-    def _buildTree(self, preOrder: List[int], inOrder: List[int], inOrderLookup: Dict[int, int]) -> Optional[BinTreeNode]:
+    def _buildTree(self, preOrder: List[int], inOrder: List[int], inOrderLookup: Dict[int, int]) -> Optional[TreeNode]:
         if not preOrder:
             return None
 
         rootVal = preOrder[0]
         index = inOrderLookup[rootVal]
-        return BinTreeNode(
+        return TreeNode(
             rootVal,
             self.buildTree(preOrder[1:index+1], inOrder[:index]),
             self.buildTree(preOrder[index+1:], inOrder[index+1:])
         )
 
-    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[BinTreeNode]:
+    def buildTree(self, preOrder: List[int], inOrder: List[int]) -> Optional[TreeNode]:
         inOrderLookup = {}
         for i, num in enumerate(inOrder):
             inOrderLookup[num] = i
