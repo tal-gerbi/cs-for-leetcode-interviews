@@ -1,7 +1,7 @@
-import heapq
 from abc import ABC, abstractmethod
-from heapq import heappop, heappush
 from typing import List
+
+from data_structures.heap.min_heap import MinHeap
 
 
 class Solution(ABC):
@@ -28,14 +28,13 @@ class MaintainLargestElementsSolution(Solution):
     """
 
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        largeElements = []
+        largeElements = MinHeap([])
         for n in nums:
-            if len(largeElements) == 0 or largeElements[0] < n:
-                heappush(largeElements, n)
+            if len(largeElements) == 0 or largeElements.peek() < n:
+                largeElements.push(n)
                 if len(largeElements) > k:
-                    heappop(largeElements)
-
-        return heappop(largeElements)
+                    largeElements.pop()
+        return largeElements.pop()
 
 
 def testSmallArray():
