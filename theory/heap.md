@@ -48,7 +48,7 @@ def heapifyDown(self, arr: List[Optional[int]], i: int):
                 i = bestChild
 ```
 
-If h is the height of the tree, then,
+If *h* is the height of the tree, then,
 ```math
 \begin{align}
     & 1 + ... + 2^{h-1} \le n \\
@@ -58,10 +58,10 @@ If h is the height of the tree, then,
     & 2^{h+1} - 1 \le 2*n + 1
 \end{align}
 ```
-Now, since the amount of swaps between level k-1 to level k is at most *2^k-1* (The number of elements in the first k-1 layers), we get a total number of swaps of
+Now, since the amount of swaps between level *k-1* to level *k* is at most `2^{k}-1` (The number of elements in the first k-1 layers), we get a total number of swaps, S, is
 ```math
 \begin{align}
-    & (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le \\
+    & S = (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le \\
     & 2^{1} + 2^{2} + ... + 2^{h} = \\
     & 2^{h+1} - 1 \le \\
     & 2*n + 1
