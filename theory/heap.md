@@ -50,21 +50,21 @@ def heapifyDown(self, arr: List[Optional[int]], i: int):
 
 If h is the height of the tree, then,
 ```math
-\displaylines{
-    1 + ... + 2^{h-1} \le n \\
-    2^{h} - 1 \le n \\
-    2^{h} \le n+1 \\
-    2^{h+1} \le 2*n + 2 \\
-    2^{h+1} - 1 \le 2*n + 1
-}
+\begin{align}
+    & 1 + ... + 2^{h-1} \le n \\
+    & 2^{h} - 1 \le n \\
+    & 2^{h} \le n+1 \\
+    & 2^{h+1} \le 2*n + 2 \\
+    & 2^{h+1} - 1 \le 2*n + 1
+\end{align}
 ```
 Now, since the amount of swaps between level k-1 to level k is at most *2^k-1* (The number of elements in the first k-1 layers), we get a total number of swaps of
 ```math
 \begin{align}
-& (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le
-& 2^{1} + 2^{2} + ... + 2^{h} =
-& 2^{h+1} - 1 \le
-& 2*n + 1
+    & (2^{1}-1) + (2^{2}-1) + ... + (2^{h}-1) \le \\
+    & 2^{1} + 2^{2} + ... + 2^{h} = \\
+    & 2^{h+1} - 1 \le \\
+    & 2*n + 1
 \end{align}
 ```
 Therefore, the time complexity of *heapify* is *O(n)*.
