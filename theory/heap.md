@@ -16,7 +16,7 @@ Heaps provide the following operations:
 
 # Implementation of a min heap
 Since a heap is a complete binary tree, it is usually implemented on top of an array.
-In this array, *arr*, the left and right children of *arr[i]* are *arr[2*i+1]* and *arr[2*i+2]* (If they are present in the array).
+In this array, *arr*, the left and right children of _arr[i]_ are _arr[2*i+1]_ and _arr[2*i+2]_ (If they are present in the array).
 
 ## Building a heap in O(n) time
 In order to build a min heap from an array in time O(n), the following algorithm is used:
