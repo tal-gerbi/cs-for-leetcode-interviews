@@ -12,4 +12,4 @@ Implementation of a trie is pretty straightforward, so I'm not going to elaborat
 | Remove      | Removes a string                   | O(n) | O(1)  |
 
 In my implementation, the depth of the recursion of the *Remove* operation, and therefore its space complexity, is O(n). One can use a constant amount of space by keeping a reference from a child to its parent.
-As for the rest of the operations of my implementation, their space and time complexity is optimal and is the same as in the table above.
+As for the rest of the operations of my implementation, their space and time complexity are optimal, like in the table above.
