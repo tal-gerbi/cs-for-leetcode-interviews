@@ -1,5 +1,5 @@
 # Trie / Prefix Tree
-A **trie**, also called a **Prefix Tree**, is an ordered tree data structure used to represent a set of strings. Strings in the tree start at the root node, with each node containing a mapping between the next character to the next node. The special character "_" marks the end of the string.
+A **trie**, also called a **Prefix Tree**, is a rooted tree used to represent a set of strings. Strings in the tree start at the root node, with each node containing a mapping between the next character to the next node. The special character "_" marks the end of the string.
 
 ## Implementation
 Implementation of a prefix tree is pretty straightforward, so I'm not going to elaborate. You can find my implementation under the `data_structures/` directory.
