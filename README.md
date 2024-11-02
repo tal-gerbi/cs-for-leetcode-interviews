@@ -7,7 +7,7 @@ In order to prevent this process from becoming too theoretical, I simply solved 
 (https://leetcode.com/studyplan/top-interview-150). Whenever a familiarity with an old-new data structure or technique was required, I looked up the 
 theory (online, and, if necessary, in computer science courses and books), summarized it, and then solved the problem.
 
-By the way, The book "Introduction to Algorithms" by Cormen et al. was what I used the most when more advanced theoretical background was required.
+By the way, the book "Introduction to Algorithms" by Cormen et al. was what I used the most when more advanced theoretical background was required.
 
 
 The organization of this project
