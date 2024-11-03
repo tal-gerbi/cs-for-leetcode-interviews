@@ -29,9 +29,9 @@ used to solve them, and then (sometimes) by technique. I solved all 150 problems
   provide (in my opinion) some educational value.
 - In the `data_structures/` directory there are various implementations of some useful data structures, including: Binary Trees, Binary Heaps, 
   Graphs, Hashmaps, Linked Lists, Queues, Stacks and Tries. Some of them are used by certain solutions to `problems/`.
-- In the `tests/` directory there are some utils used for testing solutions of various problems. These utils, too, are categorized by the 
-underlying data structure.
-- In the `algorithms/` directory there are implementations of some of the more complex algorithms from the Bachelor's degree (most of them are 
+- In the `tests/` directory there are some utils used for testing solutions of various problems. These utils are categorized by the 
+underlying data structure, and are used for the implementation of tests of certain `problems/`.
+- In the `algorithms/` directory there are implementations of some of the more complex algorithms from the bachelor's degree in CS (most of them are 
 graph-related).
 
 
