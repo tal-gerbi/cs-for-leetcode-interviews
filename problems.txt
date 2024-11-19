@@ -1,0 +1,146 @@
+problems/
+	arrays_and_strings/
+		gas_station.py
+		text_justification.py
+
+		binary_search/
+			find_peek_element.py
+			medians_of_two_sorted_arrays.py
+		kadane/
+			max_subarray.py
+		sliding_window/
+			longest_substr_without_repeating_chars.py
+			minimum_window_substring.py
+		sweep_line/
+			merge_intervals.py
+			min_arrows_to_burst_balloons.py
+		two_pointers/
+			container_with_most_water.py
+			two_sum.py
+
+	binary_trees/
+		binary_tree_maximum_path_sum.py
+		construct_from_preorder_and_inorder.py
+		lowest_common_ancestor.py
+
+		level_order_traversal/
+			level_order_traversal.py
+			next_right_node.py
+		in_order/
+			binary_search_tree_iterator.py
+			next_right_node.py
+		search_trees/
+			kth_smallest_element_in_BST.py
+			validate_BST.py
+			
+	dynamic_programming/
+		single_dim/
+			coin_change.py
+			longest_increasing_subsequence.py
+		multi_dim/
+			interleaving_string.py
+			edit_distance.py
+			best_time_to_buy_and_sell_stock.py
+
+	linked_lists/
+		reverse_nodes_in_k_group.py
+
+		devide_and_conquer/
+			sort_list.py
+			merge_k_sorted_lists.py
+			partion_list.py
+		slow_fast_pointers/
+			find_cycle.py
+			middle.py
+	
+	hashmap/
+		group_anagrams.py
+		longest_consecutive_sequence.py
+	
+	heap/
+		maintain_heap_with_k_items/
+			largest_k.py
+			median_from_stream.py
+		ipo.py
+
+	graphs/
+		bfs/
+			snakes_and_ladders.py
+			word_latter.py
+		connected_components/
+			number_of_islands.py
+		topological_sort/
+			course_schedule.py
+		
+	recursions/
+		backtracking/
+			combinations_sum.py
+			n_queens.py
+			word_search.py
+
+	stack/
+		basic_calculator.py
+		min_stack.py
+
+	trie/
+		implement_trie.py
+		word_search.py
+
+	~misc/
+		bit_manipulation/
+			bitwise_and_of_numbers_range.py
+			single_number.py
+		math/
+			pow.py
+			max_points_on_a_line.py
+
+
+data_structures/
+	binary_trees/
+		binary_heap.py
+		binary_tree.py
+	graphs/
+		array_adj_list.pyP
+		linked_list_adj_list.py
+		matrix.py
+	hashmap/
+		hashmap.py
+	linked_lists/
+		regular.py
+		doubly.py
+	queues/
+		queue.py
+	stacks/
+		stack.py
+	trie/
+		trie.py
+
+
+algorithms/
+	dynamic_programming/
+		kmp.py
+
+	graphs/
+		connectivity/
+			find_connected_components.py
+			find_sccs.py
+
+		max_flow/
+			edmonds_karp.py
+			dinic.py
+
+		scans/
+			bfs.py
+			dfs.py
+
+		spanning_tree/
+			kruskal.py
+			prim.py
+
+		shortest_paths/
+			all_pairs_shortest_paths.py
+			bellman_ford.py
+			dag_shortest_paths.py
+			dijkstra.py
+		
+
