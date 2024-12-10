@@ -1,6 +1,6 @@
 Motivation
 ==========
-I am preparing for a position in one of the big corps (Microsoft, Google, Palo Alto, etc.). Since a small portion of the admission process 
+I am preparing for a position in one of the big corps (Microsoft, Google, Meta, etc.). Since a small portion of the admission process 
 includes [LeetCode-Style Interviews](https://interviewguide.dev/leetcode), I decided to refresh some of the knowledge from my bachelor's degree in Computer Science that might be relevant for such interviews.
 
 In order to prevent this process from becoming too theoretical, I simply solved the LeetCode problem set titled [Top Interval 150](https://leetcode.com/studyplan/top-interview-150). Whenever a familiarity with an old-new data structure or technique was required, I looked up the 
